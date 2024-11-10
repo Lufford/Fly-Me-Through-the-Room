@@ -9,8 +9,7 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        enemyCollider = GetComponent<Collider2D>();
-        enemyCollider.enabled = false;
+
     }
 
     // Update is called once per frame
@@ -20,12 +19,5 @@ public class Enemy : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.CompareTag("TriggerTop"))
-        {
-            enemyCollider.isTrigger = false;
-        }
 
-    }
 }
