@@ -630,8 +630,8 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: Fly Me Through the Room
-  metroPackageVersion: 
+  metroPackageName: FlyMeThroughtheRoom
+  metroPackageVersion: 1.0.0.0
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
@@ -639,7 +639,7 @@ PlayerSettings:
   metroCertificateNotAfter: 0000000000000000
   metroApplicationDescription: Fly Me Through the Room
   wsaImages: {}
-  metroTileShortName: 
+  metroTileShortName: Fly Me Through the Room
   metroTileShowName: 0
   metroMediumTileShowName: 0
   metroLargeTileShowName: 0

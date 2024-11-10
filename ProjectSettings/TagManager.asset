@@ -5,8 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
-  - TriggerTop
-  - Trigger Bottom
+  - Despawn
+  - Magnet
   layers:
   - Default
   - TransparentFX
@@ -41,6 +41,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 2862509733
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

@@ -1,10 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class DespawnTrigger : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -13,22 +12,16 @@ public class Enemy : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         
     }
-    
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (collision.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Enemy")
         {
-            
-            //decrease health of player
+            Destroy(other.gameObject);
         }
     }
-    
-    
-
-
 }
