@@ -22,6 +22,7 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+        //movement
         horizontalInput = Input.GetAxis("Horizontal");
         verticalInput = Input.GetAxis("Vertical");
 
@@ -32,6 +33,7 @@ public class Player : MonoBehaviour
 
         currentSpeed = rb.velocity;
 
+        //dash input
         bool dash = Input.GetButtonDown("Fire3");
         if (dash && canDash && dashCharges > 0)
         {
@@ -39,6 +41,7 @@ public class Player : MonoBehaviour
         }
     }
 
+    //causes the player to dash and gives it a cooldown
     private IEnumerator Dash()
     {
         canDash = false;
