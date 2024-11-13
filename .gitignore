@@ -9,8 +9,9 @@
 /[Bb]uilds/
 /[Ll]ogs/
 /[Mm]emoryCaptures/
-[Uu]serSettings/
+/[Uu]serSettings/
 /MASTER_BUILD/
+
 
 # Never ignore Asset meta data
 !/[Aa]ssets/**/*.meta
@@ -64,3 +65,4 @@ sysinfo.txt
 crashlytics-build.properties
 .gitattributes
 .vsconfig
+
