@@ -6,7 +6,7 @@ TagManager:
   tags:
   - Enemy
   - Despawn
-  - Magnet
+  - Crumb
   layers:
   - Default
   - TransparentFX
@@ -17,7 +17,7 @@ TagManager:
   - Player
   - Enemy
   - Wall
-  - 
+  - Crumb
   - 
   - 
   - 
