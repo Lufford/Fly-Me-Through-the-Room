@@ -10,6 +10,10 @@ public class BackgroundMoving : MonoBehaviour
 
     private void Update()
     {
-        background.transform.position = new Vector3(background.transform.position.x, background.transform.position.y - speed, background.transform.position.z);
+        if (Time.timeScale == 1)
+        {
+            background.transform.position = new Vector3(background.transform.position.x, background.transform.position.y - speed, background.transform.position.z);
+        }
+        
     }
 }

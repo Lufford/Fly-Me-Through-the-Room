@@ -1,15 +1,23 @@
-using System;
+
 using System.Collections;
-using System.Collections.Generic;
+using System.Net.Mime;
+using TMPro;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject Enemy;
+    public GameObject Enemy, Crumb, pausePanel, pauseTimer;
     private float spawnRate = 0f;
     private float spawnTime = 0f;
+    private float crumbSpawnTime = 0f;
+    private float crumbSpawnRate = 0f;
     private int spawnAmount = 0;
+    public int totalScore = 0;
+    private bool gameIsPaused = false;
+    [SerializeField] private TMP_Text scoreText;
+    [SerializeField] private TMP_Text pauseTimeText;
+    
     
     
     private static GameManager instance;
@@ -31,7 +39,7 @@ public class GameManager : MonoBehaviour
         }
     }
     
-    private void spawnEnemy()
+    private void SpawnEnemy()
     {
         spawnRate = Random.Range(5, 10);
         spawnAmount = Random.Range(1, 4);
@@ -46,13 +54,59 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void Start()
+    private void SpawnCrumb()
     {
-        
+        crumbSpawnRate = 3;
+        if (Time.time > crumbSpawnTime)
+        {
+            Instantiate(Crumb, new Vector3(Random.Range(-2, 2), 6f, 0f), Quaternion.identity);
+            crumbSpawnTime = Time.time + crumbSpawnRate;
+        }
     }
 
+    public void AddScore(int score)
+    {
+        totalScore+=score;
+        scoreText.text = "Score\n" + totalScore.ToString();
+    }
+
+    private void PauseGame()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            gameIsPaused = !gameIsPaused;
+            pausePanel.SetActive(gameIsPaused);
+            if (gameIsPaused == false)
+            {
+                StartCoroutine(PauseCountdown(3));
+            }
+            else
+            {
+                Time.timeScale = 0f;
+            }
+        }
+    }
+
+    private IEnumerator PauseCountdown(int i)
+    {
+        pauseTimer.SetActive(true);
+        while(i > 0)
+        {
+            pauseTimeText.text = "Resume in " + i.ToString() + " seconds";
+            yield return new WaitForSecondsRealtime(1f);
+            i--;
+        }
+        pauseTimer.SetActive(false);
+        Time.timeScale = 1f;
+    }
+    private void Start()
+    {
+        Time.timeScale = 1f;
+    }
     private void Update()
     {
-        spawnEnemy();
+        SpawnEnemy(); 
+        SpawnCrumb();
+        PauseGame();
     }
 }
