@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     private int spawnAmount = 0;
     public int totalScore = 0;
     private bool gameIsPaused = false;
+    private bool PressEscAgain = true;
     [SerializeField] private TMP_Text scoreText;
     [SerializeField] private TMP_Text pauseTimeText;
     
@@ -72,12 +73,13 @@ public class GameManager : MonoBehaviour
 
     private void PauseGame()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && PressEscAgain == true)
         {
             gameIsPaused = !gameIsPaused;
             pausePanel.SetActive(gameIsPaused);
             if (gameIsPaused == false)
             {
+                
                 StartCoroutine(PauseCountdown(3));
             }
             else
@@ -90,6 +92,7 @@ public class GameManager : MonoBehaviour
     private IEnumerator PauseCountdown(int i)
     {
         pauseTimer.SetActive(true);
+        PressEscAgain = false;
         while(i > 0)
         {
             pauseTimeText.text = "Resume in " + i.ToString() + " seconds";
@@ -98,6 +101,7 @@ public class GameManager : MonoBehaviour
         }
         pauseTimer.SetActive(false);
         Time.timeScale = 1f;
+        PressEscAgain = true;
     }
     private void Start()
     {
