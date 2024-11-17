@@ -36,7 +36,7 @@ public class Player : MonoBehaviour
 
         //dash input
         bool dash = Input.GetButtonDown("Fire3");
-        if (dash && canDash && dashCharges > 0)
+        if (dash && canDash)
         {
             StartCoroutine(Dash());
         }
