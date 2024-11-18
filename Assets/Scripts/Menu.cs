@@ -1,10 +1,10 @@
 
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Menu : MonoBehaviour
-{
-    //Start
+{ 
     public void OnStart()
     {
         SceneManager.LoadScene(1);
