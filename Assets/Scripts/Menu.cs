@@ -7,7 +7,7 @@ public class Menu : MonoBehaviour
     //Start
     public void OnStart()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 
     //Add Controls Scene and Button Function
