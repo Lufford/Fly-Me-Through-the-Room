@@ -7,6 +7,7 @@ TagManager:
   - Enemy
   - Despawn
   - Crumb
+  - EndGame
   layers:
   - Default
   - TransparentFX
