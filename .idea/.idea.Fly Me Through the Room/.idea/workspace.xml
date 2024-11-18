@@ -6,9 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="19e69885-29a6-4373-a2c8-ef1625594e95" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Fly Me Through the Room/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Fly Me Through the Room/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Gameplay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Gameplay.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MenuController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MenuController.cs.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,10 +22,9 @@
     <setting file="file://$PROJECT_DIR$/../../COMP391-Lu/Assets/Scripts/EndLevel.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../COMP391-Lu/Assets/Scripts/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../COMP391-Lu/Assets/Scripts/MenuController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../COMP391-Lu/Assets/Scripts/Player.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../COMP391-Lu/Assets/Scripts/Player.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../COMP391-Lu/Assets/Scripts/SceneController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../COMP391-Lu/Assets/Scripts/missile.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MenuController.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
@@ -104,7 +102,8 @@
       <workItem from="1731773255166" duration="5306000" />
       <workItem from="1731879771831" duration="916000" />
       <workItem from="1731880717321" duration="337000" />
-      <workItem from="1731886583130" duration="772000" />
+      <workItem from="1731886583130" duration="1547000" />
+      <workItem from="1731889550862" duration="209000" />
     </task>
     <servers />
   </component>

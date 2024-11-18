@@ -20,8 +20,7 @@ public class GameManager : MonoBehaviour
     private bool PressEscAgain = true;
     [SerializeField] private TMP_Text scoreText;
     [SerializeField] private TMP_Text pauseTimeText;
-    [SerializeField] private Button MainMenu;
-   
+
     
     
     private static GameManager instance;
@@ -106,14 +105,10 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1f;
         PressEscAgain = true;
     }
-    private void MainMenuClicked()
-    { 
-        SceneController.instance.PlayGame("Main Menu");
-    }
+
     private void Start()
     {
         Time.timeScale = 1f;
-        MainMenu.onClick.AddListener(MainMenuClicked);
     }
     private void Update()
     {
