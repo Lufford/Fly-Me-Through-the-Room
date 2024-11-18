@@ -7,13 +7,9 @@ using UnityEngine.UI;
 public class MenuController : MonoBehaviour
 {
     [SerializeField] private Button MainMenu;
-    void Start()
+    
+    public void OnMainMenu()
     {
-        MainMenu.onClick.AddListener(MainMenuClicked);
-    }
-
-    private void MainMenuClicked()
-    {
-        SceneController.instance.PlayGame("Main Menu");
+        SceneManager.LoadScene(0);
     }
 }

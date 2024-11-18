@@ -6,6 +6,6 @@ public class EndScreen : MonoBehaviour
     //Start
     public void OnReturn()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(0);
     }
 }
