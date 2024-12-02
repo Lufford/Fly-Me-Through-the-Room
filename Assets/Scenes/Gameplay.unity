@@ -286,6 +286,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Enemy: {fileID: 7765921766523621576, guid: 8d32113b557be3d4a827f97e50dca5e8, type: 3}
+  Fan: {fileID: 2689061864980090064, guid: f6b93e36d1a087f4d8e0829b7e202992, type: 3}
+  BugLamp: {fileID: 1992157751171945049, guid: 0310c1ab0fc857245a23100d55823325, type: 3}
   Crumb: {fileID: 1299284024014149387, guid: e0ca55e18e648b145896312b842af57e, type: 3}
   pausePanel: {fileID: 672570233}
   pauseTimer: {fileID: 1974519230}
@@ -1333,7 +1335,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.75}
   m_AnchorMax: {x: 0.25, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.000015258789}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: -0.000030517578}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &984297160
@@ -2062,7 +2064,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: -5.0000076, y: 0}
+  m_AnchoredPosition: {x: -5, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1557612482

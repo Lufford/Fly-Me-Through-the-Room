@@ -42,6 +42,24 @@ public class Player : MonoBehaviour
         }
     }
 
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        //Fan Area
+        if (collision.tag == "ElectricFan")
+        {
+            //Push Right
+            if (collision.transform.localScale.x == 0.5)
+            {
+                rb.AddForce(new Vector2(50f, 0f));
+            }
+            //Push Left
+            else if (collision.transform.localScale.x == -0.5)
+            {
+                rb.AddForce(new Vector2(-50f, 0f));
+            }
+        }
+    }
+
     //causes the player to dash and gives it a cooldown
     private IEnumerator Dash()
     {

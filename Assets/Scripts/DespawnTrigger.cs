@@ -22,4 +22,13 @@ public class DespawnTrigger : MonoBehaviour
             Destroy(other.gameObject);
         }
     }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        var collisionTag = collision.gameObject.tag;
+        if (collisionTag == "ElectricFan" || collisionTag == "BugLamp")
+        {
+            Destroy(collision.gameObject);
+        }
+    }
 }

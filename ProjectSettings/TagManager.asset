@@ -8,6 +8,8 @@ TagManager:
   - Despawn
   - Crumb
   - EndGame
+  - ElectricFan
+  - BugLamp
   layers:
   - Default
   - TransparentFX

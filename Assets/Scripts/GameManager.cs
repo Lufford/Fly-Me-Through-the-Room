@@ -9,11 +9,14 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject Enemy, Crumb, pausePanel, pauseTimer;
+    public GameObject Enemy, Fan, BugLamp, Crumb, pausePanel, pauseTimer;
+    private GameObject FanCopy, BugLampCopy;
     private float spawnRate = 0f;
     private float spawnTime = 0f;
-    private float crumbSpawnTime = 0f;
+    private float obstacleSpawnRate = 0f;
+    private float obstacleSpawnTime = 0f;
     private float crumbSpawnRate = 0f;
+    private float crumbSpawnTime = 0f;
     private int spawnAmount = 0;
     public int totalScore = 0;
     private bool gameIsPaused = false;
@@ -54,6 +57,48 @@ public class GameManager : MonoBehaviour
             }
             
             spawnTime = Time.time + spawnRate;
+        }
+    }
+
+    private void SpawnFan()
+    {
+        obstacleSpawnRate = Random.Range(6, 12);
+        if (Time.time > obstacleSpawnTime)
+        {
+            //Spawn Fan
+            if ( Random.Range(0f, 1f) > 0.5f)
+            {
+                //Spawns on Left
+                if (Random.Range(0f, 1f) > 0.5f)
+                {
+                    FanCopy = Instantiate(Fan, new Vector2(-2.15f, 6f), Quaternion.identity);
+                    FanCopy.transform.localScale = new Vector2(0.5f, 0.5f);
+                }
+                //Spawns on Right
+                else
+                {
+                    FanCopy = Instantiate(Fan, new Vector2(2.15f, 6f), Quaternion.identity);
+                    FanCopy.transform.localScale = new Vector2(-0.5f, 0.5f);
+                }
+            }
+            //Spawn Bug Lamp
+            else
+            {
+                //Spawns on Left
+                if (Random.Range(0f, 1f) > 0.5f)
+                {
+                    BugLampCopy = Instantiate(BugLamp, new Vector2(-2.17f, 6f), Quaternion.identity);
+                    BugLampCopy.transform.localScale = new Vector2(-0.4f, 0.4f);
+                }
+                //Spawns on Right
+                else
+                {
+                    BugLampCopy = Instantiate(BugLamp, new Vector2(2.17f, 6f), Quaternion.identity);
+                    BugLampCopy.transform.localScale = new Vector2(0.4f, 0.4f);
+                }
+            }
+
+            obstacleSpawnTime = Time.time + obstacleSpawnRate;
         }
     }
 
@@ -113,6 +158,7 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         SpawnEnemy(); 
+        SpawnFan();
         SpawnCrumb();
         PauseGame();
     }
