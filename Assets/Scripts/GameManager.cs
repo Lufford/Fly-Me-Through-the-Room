@@ -4,6 +4,7 @@ using System.Collections;
 using System.Net.Mime;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Random = UnityEngine.Random;
 using UnityEngine.UI;
 
@@ -11,6 +12,7 @@ public class GameManager : MonoBehaviour
 {
     public GameObject Enemy, Fan, BugLamp, Crumb, pausePanel, pauseTimer;
     private GameObject FanCopy, BugLampCopy;
+    public bool canSpawn = true;
     private float spawnRate = 0f;
     private float spawnTime = 0f;
     private float obstacleSpawnRate = 0f;
@@ -49,7 +51,7 @@ public class GameManager : MonoBehaviour
     {
         spawnRate = Random.Range(5, 10);
         spawnAmount = Random.Range(1, 4);
-        if (Time.time > spawnTime)
+        if (Time.time > spawnTime && canSpawn)
         {
             for (int i = spawnAmount; i <= 4; i++)
             {
@@ -63,7 +65,7 @@ public class GameManager : MonoBehaviour
     private void SpawnFan()
     {
         obstacleSpawnRate = Random.Range(6, 12);
-        if (Time.time > obstacleSpawnTime)
+        if (Time.time > obstacleSpawnTime && canSpawn)
         {
             //Spawn Fan
             if ( Random.Range(0f, 1f) > 0.5f)
@@ -105,7 +107,7 @@ public class GameManager : MonoBehaviour
     private void SpawnCrumb()
     {
         crumbSpawnRate = 3;
-        if (Time.time > crumbSpawnTime)
+        if (Time.time > crumbSpawnTime && canSpawn)
         {
             Instantiate(Crumb, new Vector3(Random.Range(-2, 2), 6f, 0f), Quaternion.identity);
             crumbSpawnTime = Time.time + crumbSpawnRate;
@@ -115,12 +117,13 @@ public class GameManager : MonoBehaviour
     public void AddScore(int score)
     {
         totalScore+=score;
+        SceneController.instance.scoreValue = totalScore;
         scoreText.text = "Score\n" + totalScore.ToString();
     }
 
     private void PauseGame()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && PressEscAgain == true)
+        if (Input.GetKeyDown(KeyCode.Escape) && PressEscAgain)
         {
             gameIsPaused = !gameIsPaused;
             pausePanel.SetActive(gameIsPaused);
