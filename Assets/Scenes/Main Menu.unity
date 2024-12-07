@@ -316,7 +316,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Arrow keys to move
 
-    Space bar to dash'
+    Space bar to dash
+
+    Esc to Pause/Unpause'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -876,7 +878,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 583cb7f8d9e9e55409dc08e955fccb41, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.487
   m_Pitch: 1.32
   Loop: 1
   Mute: 0
