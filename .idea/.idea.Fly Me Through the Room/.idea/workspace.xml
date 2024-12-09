@@ -7,8 +7,8 @@
     <list default="true" id="19e69885-29a6-4373-a2c8-ef1625594e95" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Fly Me Through the Room/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Fly Me Through the Room/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Gameplay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Gameplay.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EndGameTrigger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EndGameTrigger.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SceneController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SceneController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BackgroundMoving.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BackgroundMoving.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +50,7 @@
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="$PROJECT_DIR$/AlphaBuild/Fly Me Through the Room.exe" />
+      <option name="EXE_PATH" value="$PROJECT_DIR$/BetaBuild\Fly Me Through the Room.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="B:\COMP 391-401 Game Design\FlyMeThroughTheRoomBuild\Fly Me Through the Room\AlphaBuild" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -116,6 +116,7 @@
       <workItem from="1731889550862" duration="209000" />
       <workItem from="1731890336371" duration="3088000" />
       <workItem from="1733357295773" duration="1829000" />
+      <workItem from="1733710839761" duration="340000" />
     </task>
     <servers />
   </component>
